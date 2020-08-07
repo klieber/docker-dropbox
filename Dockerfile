@@ -8,7 +8,7 @@ RUN apt-get update \
 RUN adduser --system --home /dropbox --shell /bin/bash --group dropbox
 
 RUN [ -d /dropbox ] || mkdir /dropbox
-ENV DROPBOX_VERSION 100.4.409 
+ENV DROPBOX_VERSION 103.4.383 
 RUN cd /dropbox && curl -L "https://www.dropbox.com/download?plat=lnx.x86_64&v=$DROPBOX_VERSION" | tar xzf -
 RUN cd /usr/bin && curl -L -o dropbox-cli "https://www.dropbox.com/download?dl=packages/dropbox.py&v=$DROPBOX_VERSION"
 RUN chmod +x /usr/bin/dropbox-cli
